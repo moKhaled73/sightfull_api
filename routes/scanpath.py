@@ -75,7 +75,7 @@ router = APIRouter()
 
 # scanpath route
 @router.post("/")
-async def upload_image(file: UploadFile = File(...)):
+async def generate_scanpath(file: UploadFile = File(...)):
     try:
         image_bytes = await file.read()
         img = Image.open(io.BytesIO(image_bytes))

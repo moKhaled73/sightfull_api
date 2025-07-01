@@ -112,7 +112,7 @@ def get_few_shot(visiual_similarities_df, num_few_shot):
 
 router = APIRouter()
 
-genai.configure(api_key="AIzaSyBswcFFQUb9j6DL-8YD5yBKkfhBWDktIsQ")
+genai.configure(api_key="AIzaSyD6_BEziYBgJYjsr_v6WxVs4fm4tzN5fEg")
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 
