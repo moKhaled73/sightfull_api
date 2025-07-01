@@ -1,5 +1,4 @@
 from fastapi import APIRouter, UploadFile, File, HTTPException
-from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import tensorflow as tf
 import numpy as np
 from PIL import Image
@@ -13,7 +12,7 @@ def preprocess_image(img, target_size=(224, 224)):
     
     # Resize, convert to array, normalize, and expand dims
     img = img.resize(target_size)
-    img_array = img_to_array(img) / 255.0
+    img_array = tf.keras.preprocessing.image.img_to_array(img) / 255.0
     img_array = np.expand_dims(img_array, axis=0)
     return img_array
 
